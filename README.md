@@ -3,18 +3,18 @@ openwrt-xiaomi-mini
 
 OpenWrt Patch for Xiaomi Router Mini
 
-#### 固件编译方法
+#### How to compile the firmware:
 
     git clone https://github.com/rssnsj/openwrt-xiaomi-mini.git
     cd openwrt-xiaomi-mini
     make
 
-#### 刷机方法
+#### Flashing the firmware generated above:
 
-* 首次刷机，开启小米路由的SSH权限（ https://d.miwifi.com/rom/ssh ），并登录，使用命令：
+* Before you flash the new firmware for the first time, visit（ https://d.miwifi.com/rom/ssh ），and bind the device to your MiWiFi account. Then log in to it and run the command below to load the new SSH-enabled binary：
 
     `mtd -r write openwrt-ramips-mt7620a-xiaomi-miwifi-mini-squashfs-sysupgrade.bin firmware`
 
-* 以后每次刷机使用：
+* Then flash this to upgrade after running the command above：
 
     `sysupgrade openwrt-ramips-mt7620a-xiaomi-miwifi-mini-squashfs-sysupgrade.bin`
